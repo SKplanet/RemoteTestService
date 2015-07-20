@@ -1,0 +1,294 @@
+com.rocode.info.DeviceControl -> com.rocode.info.a:
+    android.content.Context context -> c
+    android.os.PowerManager pm -> d
+    android.view.WindowManager wm -> e
+    android.telephony.TelephonyManager tm -> f
+    android.view.Display display -> g
+    android.util.DisplayMetrics metrics -> h
+    int batteryTemperature -> a
+    android.os.PowerManager$WakeLock wl -> i
+    boolean wakeLock -> j
+    com.rocode.rotate.ScreenRotator screenRotator -> k
+    android.os.Handler handler -> l
+    int batteryLevel -> b
+    java.util.ArrayList exceptPkgNameArray -> m
+    java.lang.String[] exceptPkgNames -> n
+    java.lang.Runnable rotate0 -> o
+    java.lang.Runnable rotate90 -> p
+    java.lang.Runnable rotate180 -> q
+    java.lang.Runnable rotate270 -> r
+    java.lang.Runnable rotateRecovery -> s
+    com.rocode.info.DeviceControl deviceControl -> t
+    android.content.BroadcastReceiver mBatInfoReceiver -> u
+    com.rocode.info.DeviceControl getDeviceControl(android.content.Context) -> a
+    void clean() -> a
+    java.lang.String getLine1Number() -> b
+    java.lang.String getNetworkOperator() -> c
+    java.lang.String getNetworkOperatorName() -> d
+    boolean isSimStateAbsent() -> e
+    boolean isSimStatePinRequired() -> f
+    boolean isSimStatePUKRequired() -> g
+    boolean isSimStateReady() -> h
+    boolean isSimStateUnknown() -> i
+    java.lang.String getDeviceId() -> j
+    java.lang.String getDeviceSoftwareVersion() -> k
+    boolean isScreenOn() -> l
+    void wakeLockAcquire() -> m
+    void wakeLockRelease() -> n
+    int getRotation() -> o
+    int getWidth() -> p
+    int getHeight() -> q
+    int getPixelFormat() -> r
+    void setRotate0() -> s
+    void setRotate90() -> t
+    void setRotate180() -> u
+    void setRotate270() -> v
+    void setRotateRecovery() -> w
+    boolean isAutoRotate() -> x
+    int getDensityDpi() -> y
+    java.lang.String getRCServiceVersionName() -> z
+    int getBatteryTemperature() -> A
+    int getBatteryLevel() -> B
+    java.lang.String getBuildBoard() -> C
+    java.lang.String getBuildBootLoader() -> D
+    java.lang.String getBuildBrand() -> E
+    java.lang.String getBuildCPU_ABI() -> F
+    java.lang.String getBuildCPU_ABI2() -> G
+    java.lang.String getBuildDevice() -> H
+    java.lang.String getBuildDisplay() -> I
+    java.lang.String getBuildFingerPrint() -> J
+    java.lang.String getBuildHardware() -> K
+    java.lang.String getBuildHost() -> L
+    java.lang.String getBuildID() -> M
+    java.lang.String getBuildManuFacturer() -> N
+    java.lang.String getBuildModel() -> O
+    java.lang.String getBuildProduct() -> P
+    java.lang.String getBuildRadio() -> Q
+    java.lang.String getBuildSerial() -> R
+    java.lang.String getBuildTags() -> S
+    long getBuildTime() -> T
+    java.lang.String getBuildType() -> U
+    java.lang.String getBuildUser() -> V
+    java.lang.String getBuildVersionCodeName() -> W
+    java.lang.String getBuildVersionIncremental() -> X
+    java.lang.String getBuildVersionRelease() -> Y
+    java.lang.String getBuildVersionSDKInt() -> Z
+    java.util.ArrayList getInstalledPkgNames() -> aa
+    com.rocode.rotate.ScreenRotator access$0(com.rocode.info.DeviceControl) -> a
+com.rocode.info.DeviceControl$1 -> com.rocode.info.b:
+    com.rocode.info.DeviceControl this$0 -> a
+    void run() -> run
+com.rocode.info.DeviceControl$2 -> com.rocode.info.c:
+    com.rocode.info.DeviceControl this$0 -> a
+    void run() -> run
+com.rocode.info.DeviceControl$3 -> com.rocode.info.d:
+    com.rocode.info.DeviceControl this$0 -> a
+    void run() -> run
+com.rocode.info.DeviceControl$4 -> com.rocode.info.e:
+    com.rocode.info.DeviceControl this$0 -> a
+    void run() -> run
+com.rocode.info.DeviceControl$5 -> com.rocode.info.f:
+    com.rocode.info.DeviceControl this$0 -> a
+    void run() -> run
+com.rocode.info.DeviceControl$6 -> com.rocode.info.DeviceControl$6:
+    com.rocode.info.DeviceControl this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.rocode.log.Log -> com.rocode.a.a:
+    boolean enableLog -> a
+    void setLogEnable(boolean) -> a
+    int d(java.lang.String,java.lang.String) -> a
+    int i(java.lang.String,java.lang.String) -> b
+    int e(java.lang.String,java.lang.String) -> c
+com.rocode.monitor.CallMonitorBroadcastReceiver -> com.rocode.monitor.CallMonitorBroadcastReceiver:
+    com.rocode.skrc.RCService service -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    boolean shouldCancel(java.lang.String) -> a
+com.rocode.monitor.ServiceMonitorBroadcastReceiver -> com.rocode.monitor.ServiceMonitorBroadcastReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    boolean getServiceTaskName(android.content.Context) -> a
+com.rocode.parser.CMDParser -> com.rocode.b.a:
+    int execute(com.rocode.skrc.RCService,com.rocode.info.DeviceControl,int,int,java.lang.String,byte[]) -> a
+com.rocode.rotate.IRotate -> com.rocode.rotate.a:
+    void rotate0() -> a
+    void rotate90() -> b
+    void rotate180() -> c
+    void rotate270() -> d
+    void rotateRecovery() -> e
+com.rocode.rotate.IRotate$Stub -> com.rocode.rotate.b:
+    com.rocode.rotate.IRotate asInterface(android.os.IBinder) -> a
+    android.os.IBinder asBinder() -> asBinder
+    boolean onTransact(int,android.os.Parcel,android.os.Parcel,int) -> onTransact
+com.rocode.rotate.IRotate$Stub$Proxy -> com.rocode.rotate.c:
+    android.os.IBinder mRemote -> a
+    android.os.IBinder asBinder() -> asBinder
+    void rotate0() -> a
+    void rotate90() -> b
+    void rotate180() -> c
+    void rotate270() -> d
+    void rotateRecovery() -> e
+com.rocode.rotate.RotateActivity -> com.rocode.rotate.RotateActivity:
+    java.lang.String TAG -> a
+    com.rocode.rotate.IRotate mServiceBinder -> b
+    boolean isBinded -> d
+    android.content.ServiceConnection serviceCon -> e
+    android.content.Intent serviceIntent -> f
+    android.content.ComponentName mService -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
+    void access$0(com.rocode.rotate.RotateActivity,boolean) -> a
+    android.content.Intent access$1(com.rocode.rotate.RotateActivity) -> a
+com.rocode.rotate.RotateActivity$1 -> com.rocode.rotate.RotateActivity$1:
+    com.rocode.rotate.RotateActivity this$0 -> a
+    void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
+    void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
+com.rocode.rotate.RotateActivity$10 -> com.rocode.rotate.d:
+    com.rocode.rotate.RotateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rocode.rotate.RotateActivity$2 -> com.rocode.rotate.e:
+    com.rocode.rotate.RotateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rocode.rotate.RotateActivity$3 -> com.rocode.rotate.f:
+    com.rocode.rotate.RotateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rocode.rotate.RotateActivity$4 -> com.rocode.rotate.g:
+    com.rocode.rotate.RotateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rocode.rotate.RotateActivity$5 -> com.rocode.rotate.h:
+    com.rocode.rotate.RotateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rocode.rotate.RotateActivity$6 -> com.rocode.rotate.i:
+    com.rocode.rotate.RotateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rocode.rotate.RotateActivity$7 -> com.rocode.rotate.j:
+    com.rocode.rotate.RotateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rocode.rotate.RotateActivity$8 -> com.rocode.rotate.k:
+    com.rocode.rotate.RotateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rocode.rotate.RotateActivity$9 -> com.rocode.rotate.l:
+    com.rocode.rotate.RotateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rocode.rotate.ScreenRotator -> com.rocode.rotate.m:
+    com.rocode.rotate.ScreenRotator screenRotator -> a
+    android.view.WindowManager$LayoutParams layoutParams -> b
+    android.view.View view -> c
+    android.view.WindowManager windowManager -> d
+    android.content.Context context -> e
+    android.os.Handler handler -> f
+    java.lang.Runnable accelerometer_rotation0 -> g
+    java.lang.Runnable accelerometer_rotation1 -> h
+    com.rocode.rotate.ScreenRotator getScreenRotator(android.content.Context) -> a
+    void rotate0() -> a
+    void rotate90() -> b
+    void rotate180() -> c
+    void rotate270() -> d
+    void rotateRecovery() -> e
+    android.content.Context access$0(com.rocode.rotate.ScreenRotator) -> a
+com.rocode.rotate.ScreenRotator$1 -> com.rocode.rotate.n:
+    com.rocode.rotate.ScreenRotator this$0 -> a
+    void run() -> run
+com.rocode.rotate.ScreenRotator$2 -> com.rocode.rotate.o:
+    com.rocode.rotate.ScreenRotator this$0 -> a
+    void run() -> run
+com.rocode.skrc.LockActivity -> com.rocode.skrc.LockActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
+com.rocode.skrc.RCBroadcastReceiver -> com.rocode.skrc.RCBroadcastReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.rocode.skrc.RCService -> com.rocode.skrc.RCService:
+    com.rocode.socket.DeviceInfoServer server -> a
+    com.rocode.rotate.ScreenRotator screenRotator -> b
+    com.rocode.skrc.RCService$LogcatMonitor mLogcatMonitor -> c
+    com.rocode.monitor.CallMonitorBroadcastReceiver callMonitor -> d
+    java.util.ArrayList callAllowArray -> e
+    java.util.ArrayList callBlockArray -> f
+    java.util.ArrayList pkgBlockArray -> g
+    java.util.ArrayList mimetypeBlockArray -> h
+    java.util.Hashtable callBlockLog -> i
+    java.util.Hashtable pkgBlockLog -> j
+    android.content.Intent lockActivityIntent -> k
+    android.app.ActivityManager am -> l
+    boolean pkgBlock -> m
+    android.os.Handler pkgBlockHandler -> n
+    java.lang.Runnable pkgBlockRunnable -> o
+    int postDelay -> p
+    com.rocode.rotate.IRotate$Stub mBinder -> q
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    java.util.ArrayList getArrayList(java.lang.String,java.lang.String) -> a
+    void onCreate() -> onCreate
+    int onStartCommand(android.content.Intent,int,int) -> onStartCommand
+    void onDestroy() -> onDestroy
+    void stopRCService() -> a
+    boolean isCallBlock() -> b
+    java.util.ArrayList getCallAllowArray() -> c
+    java.util.ArrayList getCallBlockArray() -> d
+    void setCallBlockList(java.lang.String) -> a
+    void setCallAllowList(java.lang.String) -> b
+    void setBlockPkgNameList(java.lang.String) -> c
+    void addCallBlockLog(java.lang.String) -> d
+    void addPkgBlockLog(java.lang.String) -> e
+    void setBlockMimetypeList(java.lang.String) -> f
+    void addMimetypePKGBlock() -> m
+    void removeMimetypePKGBlock() -> n
+    byte[] getLog() -> e
+    boolean isCallBlocked() -> f
+    boolean isPkgBlocked() -> g
+    com.rocode.socket.DeviceInfoServer getServer() -> h
+    void startLogcat() -> i
+    void stopLogcat() -> j
+    void startPkgBlock() -> k
+    void stopPkbBlock() -> l
+    void setPkgBlockPostDelay(int) -> a
+    android.app.ActivityManager access$0(com.rocode.skrc.RCService) -> a
+    boolean access$1(com.rocode.skrc.RCService) -> b
+    java.util.ArrayList access$2(com.rocode.skrc.RCService) -> c
+    android.os.Handler access$3(com.rocode.skrc.RCService) -> d
+    java.lang.Runnable access$4(com.rocode.skrc.RCService) -> e
+    int access$5(com.rocode.skrc.RCService) -> f
+    com.rocode.socket.DeviceInfoServer access$6(com.rocode.skrc.RCService) -> g
+    android.content.Intent access$7(com.rocode.skrc.RCService) -> h
+    com.rocode.rotate.ScreenRotator access$8(com.rocode.skrc.RCService) -> i
+com.rocode.skrc.RCService$1 -> com.rocode.skrc.a:
+    com.rocode.skrc.RCService this$0 -> a
+    void run() -> run
+com.rocode.skrc.RCService$2 -> com.rocode.skrc.b:
+    com.rocode.skrc.RCService this$0 -> a
+    void rotate0() -> a
+    void rotate90() -> b
+    void rotate180() -> c
+    void rotate270() -> d
+    void rotateRecovery() -> e
+com.rocode.skrc.RCService$LogcatMonitor -> com.rocode.skrc.c:
+    com.rocode.skrc.RCService this$0 -> a
+    void onError(java.lang.String,java.lang.Throwable) -> a
+    void onNewline(java.lang.String) -> a
+com.rocode.socket.DeviceInfoServer -> com.rocode.c.a:
+    java.net.ServerSocket serverS -> a
+    int port -> b
+    com.rocode.skrc.RCService context -> c
+    com.rocode.info.DeviceControl deviceControl -> d
+    byte[] sizeBuffer -> e
+    byte[] cmdBuffer -> f
+    byte[] indexBuffer -> g
+    byte[] resultValueBuffer -> h
+    byte[] bodyBuffer -> i
+    byte[] readBuffer -> j
+    byte[] writeBuffer -> k
+    boolean runRW -> l
+    boolean clientSockConnected -> m
+    java.io.BufferedOutputStream bufferedOs -> n
+    void stopServer() -> a
+    boolean isClientConnected() -> b
+    void run() -> run
+    void sendMsg(int,int,int,java.lang.String) -> a
+com.rocode.util.Utils -> com.rocode.d.a:
+    void smsDelete(android.content.Context) -> a
+    void mmsDelete(android.content.Context) -> b
+    void callDelete(android.content.Context) -> c
+org.devtcg.tools.logcat.LogcatProcessor -> a.a.a.a.a:
+    int mLines -> a
+    java.lang.Process mLogcatProc -> b
+    void run() -> run
+    void stopCatter() -> a
+    void onError(java.lang.String,java.lang.Throwable) -> a
+    void onNewline(java.lang.String) -> a

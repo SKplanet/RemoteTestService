@@ -1,0 +1,1576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="callback.cpp" />
+    <ClCompile Include="DlgPreview.cpp" />
+    <ClCompile Include="Preview.cpp" />
+    <ClCompile Include="RAToolBar.cpp" />
+    <ClCompile Include="SSplitter.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="TA.cpp" />
+    <ClCompile Include="TADlg.cpp" />
+    <ClCompile Include="util.cpp" />
+    <ClCompile Include="..\rui\rui_thread.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_adb.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_client.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_event.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_frame.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_log.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_main.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_socket.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_tdc.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_file.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\Common\RUIDef.cpp">
+      <Filter>skvideo\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\color_space_converter\umc_color_space_conversion.cpp">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\color_space_converter\umc_d3d_video_processing.cpp">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\color_space_converter\umc_deinterlacing.cpp">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\color_space_converter\umc_video_processing.cpp">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\color_space_converter\umc_video_resizing.cpp">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_audio_codec.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_audio_render.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_base_codec.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_default_frame_allocator.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_default_memory_allocator.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_dual_thread_codec.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_frame_data.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_index.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_media_buffer.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_media_data.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_media_data_ex.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_muxer.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_par_reader.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_splitter.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_utils.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_video_data.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_video_decoder.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_video_encoder.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_video_render.cpp">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_debug_win32.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_event_win32.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_file.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_file_win.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_mmap_win32.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_mutex_win32.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_semaphore_win32.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_shared_object_win32.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_socket_win32.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_sys_info_win32.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_thread_win32.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_time_win32.c">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_event.cpp">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_malloc.cpp">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_mmap.cpp">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_mutex.cpp">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_pendulum.cpp">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_semaphore.cpp">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_sys_info.cpp">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_thread.cpp">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_base_bitstream.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_aic.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_avbr.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_bs.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_core_enc.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_mbaff.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tools.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_enc_cpb.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_ermb.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_gen_enc.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_mc.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_me.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_pack.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_sad.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_tables.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_video_encoder.cpp">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_me.cpp">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_me_m2.cpp">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_me_regr_tbl.cpp">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_me_sadt4x4.cpp">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_vec_prediction.cpp">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_vme.cpp">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_acinter.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_acintra.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_blk_order_tbl.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_cbpcy_tbl.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_dc_tbl.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_enc_tables.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlaced_cbpcy_tables.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlace_mb_mode_tables.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlace_mv_tables.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_mvdiff_tbl.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_mv_block_pattern_tables.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_tables.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_tables_adv.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_ttmb_tbl.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_zigzag_tbl.cpp">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_adv.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bitplane.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bitstream.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bit_rate_control.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_block.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_brc_gop.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_common.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_deblocking.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_debug.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_hrd.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_mb.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_picture_adv.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_picture_sm.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_planes.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_pred.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sequence_adv.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sequence_sm.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sm.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_statistic.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_video_encoder.cpp">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer.cpp">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_base.cpp">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_frame.cpp">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_mb_func.cpp">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_p.cpp">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_p_func.cpp">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_p_func_mb.cpp">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_video_data_scene_info.cpp">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\G723\decode.cpp">
+      <Filter>skvideo\RUILib\Audio\G723</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\G723\encode.cpp">
+      <Filter>skvideo\RUILib\Audio\G723</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\G723\g721.cpp">
+      <Filter>skvideo\RUILib\Audio\G723</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\G723\g723_24.cpp">
+      <Filter>skvideo\RUILib\Audio\G723</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\G723\g723_40.cpp">
+      <Filter>skvideo\RUILib\Audio\G723</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\G723\g72x.cpp">
+      <Filter>skvideo\RUILib\Audio\G723</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIAudio.cpp">
+      <Filter>skvideo\RUILib\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIUseBufferList.cpp">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIBuffer.cpp">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIBufferList.cpp">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIFragmentBuffer.cpp">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIFragmentBufferList.cpp">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIFrameBuffer.cpp">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIFrameBufferList.cpp">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIOffsetBuffer.cpp">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIOffsetBufferList.cpp">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIUseBuffer.cpp">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUICsLocker.cpp">
+      <Filter>skvideo\RUILib\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIThread.cpp">
+      <Filter>skvideo\RUILib\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIBufferVideoEncoderThread.cpp">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\IPPVideoEncoder.cpp">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIBufferVideoEncoder.cpp">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUITCPSockPeerList.cpp">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUITCPSockServer.cpp">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIUDPFrameList.cpp">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIUDPSock.cpp">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIUDPSockList.cpp">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIUDPSockServer.cpp">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUITCPSock.cpp">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUITCPSockClient.cpp">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUITCPSockPeer.cpp">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="WaveInDevice.cpp">
+      <Filter>skvideo_impl</Filter>
+    </ClCompile>
+    <ClCompile Include="WaveInDeviceList.cpp">
+      <Filter>skvideo_impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_video.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\RUIServerPeer.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\extension\ipp_extension.cpp">
+      <Filter>skvideo\h264\common\extension</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSerial.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUISockUtil.cpp">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUILibDef.cpp">
+      <Filter>skvideo\RUILib\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_poc.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rui\WinAES.cpp">
+      <Filter>rui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aaccmn_adif.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aaccmn_adts.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aaccmn_chmap.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_dec_api.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_dec_stream_elements.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_enc_elements.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_enc_huff_tables.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_enc_search.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_filterbank_fp.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_sfb_tables.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_win_tables_fp.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\bstream.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\mp4cmn_config.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\mp4cmn_const.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\mp4cmn_pce.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\ps_dec_parser.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\ps_huff_tabs.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_dec_env_decoding.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_dec_parser.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_dec_reset.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_freq_tabs.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_huff_tabs.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_pow_vec.c">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_api_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_ltp_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_psychoacoustic_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_psy_tables_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_quantization_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_thr.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_bitstream.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_dbg.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_delta_coding.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_encoder_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_env_estimation_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_frame_gen.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_invf_estimation_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_noisef_estimation_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_qmf_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_resampler_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_sin_estimation_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_ton_estimation_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_tuning_tabs.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_utility_fp.c">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\umc_aac_encoder.cpp">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_api_int.c">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_filterbank_int.c">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_ltp_int.c">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_psychoacoustic_int.c">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_psy_tables_int.c">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_quantization_int.c">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_win_tables_int.c">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\umc_aac_encoder_int.cpp">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\IPPAudioEncoder.cpp">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIBufferAudioEncoder.cpp">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIBufferAudioEncoderThread.cpp">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIAudioPlay.cpp">
+      <Filter>skvideo\RUILib\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\RUILib\RUIAudioRec.cpp">
+      <Filter>skvideo\RUILib\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Progress.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\rui\keycodes.h" />
+    <ClInclude Include="DlgPreview.h" />
+    <ClInclude Include="Preview.h" />
+    <ClInclude Include="RAToolBar.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SSplitter.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TA.h" />
+    <ClInclude Include="TADlg.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\rui\rui.h">
+      <Filter>rui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rui\ruicmd.h">
+      <Filter>rui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rui\ruitdccmd.h">
+      <Filter>rui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\Common\RUIDef.h">
+      <Filter>skvideo\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_color_space_conversion.h">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_d3d_video_processing.h">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_data_pointers_copy.h">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_deinterlacing.h">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_video_processing.h">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_video_resizing.h">
+      <Filter>skvideo\h264\common\color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_audio_codec.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_audio_render.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_base_codec.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_base_color_space_converter.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_data_reader.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_data_writer.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_default_frame_allocator.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_default_memory_allocator.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_defs.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_dual_thread_codec.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_dynamic_cast.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_frame_allocator.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_frame_data.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_index.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_linked_list.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_media_buffer.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_media_data.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_media_data_ex.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_media_receiver.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_memory_allocator.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_module_context.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_muxer.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_par_reader.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_splitter.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_splitter_ex.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_structures.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_video_data.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_video_decoder.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_video_encoder.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_video_render.h">
+      <Filter>skvideo\h264\common\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\sys\vm_file_win.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\sys\vm_types_win32.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_debug.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_event.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_file.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_mmap.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_mutex.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_semaphore.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_shared_object.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_socket.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_strings.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_sys_info.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_thread.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_time.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_types.h">
+      <Filter>skvideo\h264\common\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_automatic_mutex.h">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_event.h">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_malloc.h">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_mmap.h">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_mutex.h">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_pendulum.h">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_semaphore.h">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_sys_info.h">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_thread.h">
+      <Filter>skvideo\h264\common\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_base_bitstream.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_base_bitstream_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_base_bitstream_tmpl.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_aic_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_avbr.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_bme.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_bs.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_bs_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_bs_tmpl.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_config.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_core_enc.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_core_enc_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_core_enc_tmpl.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_mbaff_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tmpl.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tools.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tools_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tools_tmpl.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_defs.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_defs_tmpl.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_enc_cpb.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_enc_cpb_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_enc_cpb_tmpl.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_ermb_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_gen_enc_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_mc_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_me_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_pack_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_tables.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_to_ipp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_video_encoder.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_video_encoder_tmpl.cpp.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_wrappers.h">
+      <Filter>skvideo\h264\encoder\h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_me.h">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_me_cost_func.h">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_me_m2.h">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_me_sadt4x4.h">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_me_structures.h">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_vec_prediction.h">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_vme.h">
+      <Filter>skvideo\h264\encoder\me</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_acinter.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_acintra.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_blk_order_tbl.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_cbpcy_tbl.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_dc_tbl.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_defs.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_defs_enc.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_enc_tables.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlaced_cbpcy_tables.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlace_mb_mode_tables.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlace_mv_tables.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_macros_defs.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_mvdiff_tbl.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_mv_block_pattern_tables.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_tables.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_tables_adv.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_ttmb_tbl.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_zigzag_tbl.h">
+      <Filter>skvideo\h264\encoder\vc1_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_adv.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bitplane.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bitstream.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bit_rate_control.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_block.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_block_template.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_brc_gop.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_common.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_deblocking.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_debug.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_def.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_hrd.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_mb.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_mb_template.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_picture_adv.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_picture_sm.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_planes.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_pred.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sequence_adv.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sequence_sm.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sm.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_statistic.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_tables.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_video_encoder.h">
+      <Filter>skvideo\h264\encoder\vc1_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer.h">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_base.h">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_frame.h">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_mb_func.h">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_p.h">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_params.h">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_info.h">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_video_data_scene_info.h">
+      <Filter>skvideo\h264\encoder\scene_analyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\G723\decode.h">
+      <Filter>skvideo\RUILib\Audio\G723</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\G723\encode.h">
+      <Filter>skvideo\RUILib\Audio\G723</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\G723\g711.h">
+      <Filter>skvideo\RUILib\Audio\G723</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\G723\g72x.h">
+      <Filter>skvideo\RUILib\Audio\G723</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIAudio.h">
+      <Filter>skvideo\RUILib\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIUseBuffer.h">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIUseBufferList.h">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIBuffer.h">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIBufferList.h">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIFragmentBuffer.h">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIFragmentBufferList.h">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIFrameBuffer.h">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIFrameBufferList.h">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIOffsetBuffer.h">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIOffsetBufferList.h">
+      <Filter>skvideo\RUILib\Common\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUICsLocker.h">
+      <Filter>skvideo\RUILib\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIThread.h">
+      <Filter>skvideo\RUILib\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\TList.h">
+      <Filter>skvideo\RUILib\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUILibDef.h">
+      <Filter>skvideo\RUILib\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIBufferVideoEncoder.h">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIBufferVideoEncoderThread.h">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\IPPVideoEncoder.h">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUITCPSockPeer.h">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUITCPSockPeerList.h">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUITCPSockServer.h">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIUDPFrameList.h">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIUDPSock.h">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIUDPSockList.h">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIUDPSockServer.h">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUITCPSock.h">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUITCPSockClient.h">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="WaveInDeviceList.h">
+      <Filter>skvideo_impl</Filter>
+    </ClInclude>
+    <ClInclude Include="WaveInDevice.h">
+      <Filter>skvideo_impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rui\RUIServerPeer.h">
+      <Filter>rui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\extension\ipp_extension.h">
+      <Filter>skvideo\h264\common\extension</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSerial.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUISockUtil.h">
+      <Filter>skvideo\RUILib\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rui\WinAES.h">
+      <Filter>rui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aaccmn_adif.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aaccmn_adts.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aaccmn_chmap.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aaccmn_const.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_dec_own.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_enc_huff_tables.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_enc_own.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_enc_search.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_filterbank_fp.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_filterbank_int.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_sfb_tables.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_status.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_wnd_tables_fp.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\align.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\audio_codec_params.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\bstream.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\mp4cmn_config.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\mp4cmn_const.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\mp4cmn_pce.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\ps_dec_parser.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\ps_dec_settings.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\ps_dec_struct.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_dec_parser.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_dec_settings.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_dec_struct.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_freq_tabs.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_huff_tabs.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_settings.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_struct.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\umc_aac_decoder_params.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\common\codec\umc_aac_encoder_params.h">
+      <Filter>skvideo\h264\common\codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\aac_enc_fp.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\aac_enc_ltp_fp.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\aac_enc_own_fp.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\aac_enc_psychoacoustic_fp.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\aac_enc_quantization_fp.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\saacenc_tns.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_api_fp.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_dbg.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_own_fp.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_settings.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_struct.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\umc_aac_encoder.h">
+      <Filter>skvideo\h264\encoder\aac_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_filterbank_int.h">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_int.h">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_ltp_int.h">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_own_int.h">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_psychoacoustic_int.h">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_quantization_int.h">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_wnd_tables_int.h">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\saacenc_int_tns.h">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\umc_aac_encoder_int.h">
+      <Filter>skvideo\h264\encoder\aac_enc_int</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\IPPAudioEncoder.h">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIBufferAudioEncoder.h">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skvideo\RUILib\RUIBufferAudioEncoderThread.h">
+      <Filter>skvideo\RUILib\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Progress.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="ruicmd\AdbWinApi.dll">
+      <Filter>ruicmd</Filter>
+    </None>
+    <None Include="ruicmd\AdbWinUsbApi.dll">
+      <Filter>ruicmd</Filter>
+    </None>
+    <None Include="ruicmd\ruicapsvc">
+      <Filter>ruicmd</Filter>
+    </None>
+    <None Include="ruicmd\ruicmd.exe">
+      <Filter>ruicmd</Filter>
+    </None>
+    <None Include="res\toolbar1.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\TA.rc2">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\TA.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\5.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\1.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\2.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\3.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\4.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="TA.nsi">
+      <Filter>nsis-installscript</Filter>
+    </None>
+    <None Include="RA.nsi">
+      <Filter>nsis-installscript</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="rui">
+      <UniqueIdentifier>{2ff4f9ed-6de3-4fa4-bcd5-7177614523f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ruicmd">
+      <UniqueIdentifier>{47ee12cb-845b-49b5-abc2-2445b501f75c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{1075bc1c-53e7-41f2-9891-ddb753096800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo">
+      <UniqueIdentifier>{63b4e83c-84ad-4d6f-ba64-02291b717b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\Common">
+      <UniqueIdentifier>{e84e75df-36f1-41ea-a067-868dd84965cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264">
+      <UniqueIdentifier>{fd3a5c11-2b14-4993-a6dd-73aa43460dc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\RUILib">
+      <UniqueIdentifier>{e8caf4e0-6432-4665-bbb3-2a24483c8fc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\common">
+      <UniqueIdentifier>{c1a1f034-1fd7-42c8-b96d-efaa6662f040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\common\color_space_converter">
+      <UniqueIdentifier>{f2386612-92b2-4985-b4b3-956444fc1dbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\common\umc">
+      <UniqueIdentifier>{8aeb79ff-aaae-4e66-b8b3-003025922a61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\common\vm">
+      <UniqueIdentifier>{c34a3cc5-cc15-4067-86aa-7d79fb293b0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\common\vm_plus">
+      <UniqueIdentifier>{e4cdecd5-dc18-47c8-9379-2977f79f2ac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\encoder">
+      <UniqueIdentifier>{94275bf8-9f50-49b8-bf3e-eccb715a8714}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\encoder\h264_enc">
+      <UniqueIdentifier>{29eea37a-1290-44ee-9a61-3f587040b01d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\encoder\me">
+      <UniqueIdentifier>{a8791f68-7b64-4fc9-9f49-a3afda7a1477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\encoder\scene_analyzer">
+      <UniqueIdentifier>{0f71a67e-4403-45fd-ae2b-dd50dc53f597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\encoder\vc1_common">
+      <UniqueIdentifier>{64ed2ea4-916f-4cd9-b7c8-840fbcacf041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\encoder\vc1_enc">
+      <UniqueIdentifier>{e4889c2e-ac4d-4f94-bfc1-439eaee1fb63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\RUILib\Audio">
+      <UniqueIdentifier>{3fbc7e26-0ba0-44f0-9666-af0c6952238e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\RUILib\Common">
+      <UniqueIdentifier>{e62dff33-5de1-4f65-a2da-dd3f97b92283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\RUILib\Encoder">
+      <UniqueIdentifier>{3b8ba9d7-e91b-497c-852e-7cb81d197b19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\RUILib\Socket">
+      <UniqueIdentifier>{3e6ad3a2-22e2-4404-b08a-c38c8906cc49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\RUILib\Audio\G723">
+      <UniqueIdentifier>{65fbd7e7-fdae-4bcb-a9ed-296d609f6ed2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\RUILib\Common\Buffer">
+      <UniqueIdentifier>{ca344de5-d858-4116-9c5c-c799059cccd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo_impl">
+      <UniqueIdentifier>{9eaf17b5-2480-4aec-9713-d914584d054c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\common\extension">
+      <UniqueIdentifier>{91f8d6f4-0b1b-4fd8-b70c-ca1afcad0e7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\common\codec">
+      <UniqueIdentifier>{a9718826-df09-413a-8cb9-cbea2ee292b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\encoder\aac_enc">
+      <UniqueIdentifier>{913e8fef-2c66-4187-abed-cbee19231107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skvideo\h264\encoder\aac_enc_int">
+      <UniqueIdentifier>{73e60f87-d76f-44b6-8916-0bcc6d042359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nsis-installscript">
+      <UniqueIdentifier>{d0c2c299-03ec-40e0-9259-c6c9e0cdd149}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TA.rc">
+      <Filter>res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

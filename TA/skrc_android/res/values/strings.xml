@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="invisible">Invisible</string>
+    <string name="visible">Visible</string>
+    <string name="toast_visibility_">Toast Visibility: </string>
+    <string name="toast_size_">Toast Size: </string>
+    <string name="toast_location_">Toast Location: </string>
+    <string name="log_toaster_running">Log Toaster: Running</string>
+    <string name="log_toaster_stopped">Log Toaster: Stopped</string>
+    <string name="_30_">30%</string>
+    <string name="_50_">50%</string>
+    <string name="_100_">100%</string>
+    <string name="bottom">Bottom</string>
+    <string name="center">Center</string>
+    <string name="top">Top</string>
+    <string name="logging_service_is_now_running_">Log Toaster Service is now running.</string>
+    <string name="click_this_pannel_to_invoke_a_log_remocon">Touch to show Log Remocon.</string>
+    <string name="please_display_non_tagged_logs_too">show non tagged logs, please.</string>
+    <string name="seperated_by">separated by \',\'</string>
+    <string name="toats_size">Toast Size</string>
+    <string name="toats_location">Toast Location</string>
+    <string name="no_log">No Log</string>
+    <string name="tab_toast_setting">Toast Setting</string>
+    <string name="tabl_log_viewer">Log Viewer</string>
+    <string name="hide_toast">Hide\nToast</string>
+    <string name="stop_service">Stop\nService</string>
+    <string name="launch_viewer">Launch\nViewer</string>
+    <string name="show_toast">Show\nToast</string>
+    <string name="rc_title">Log Toaster</string>
+    <string name="jump_to_error">Jump to an error</string>
+    <string name="fail_to_create_a_file">Fail to create a file. Check you have enough external storage space.</string>
+    <string name="save_as">Save As</string>
+    <string name="send_to">Send To</string>
+    <string name="service_start">ON</string>
+    <string name="input_tag_hint">please touch me.</string>
+    <string name="input_tag">Filter: </string>
+    <string name="hello">Hello World, LogReader!</string>
+    <string name="service_stop">OFF</string>
+    <string name="filter_priority">Select Filter Priority</string>
+    <string name="logtoaster_app_name">LogToaster</string>
+    <string name="rotate_app_name">Rotate</string>
+    <string name="app_name">SKRC</string>
+    <string name="lock_screen_msg">This program can not be displayed.\nPlease, press Home key.\n\nif you need access permission, please contact the administrator.</string>
+</resources>

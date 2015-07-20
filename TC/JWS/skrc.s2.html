@@ -1,0 +1,27 @@
+<script src="http://www.java.com/js/deployJava.js"></script>
+<body>
+<p>
+Start Remote Test Client : 
+<script>
+    var url = "http://121.140.140.35:9685/skrc.s2.jnlp.php?reservation-id=201306190108995225901052700256&reservation-ip=192.168.0.212&reservation-pt=6001";
+    deployJava.createWebStartLaunchButton(url, '1.6.0');
+</script>
+</p>
+<p>with three parameter</p>
+<p>
+Start Remote Test Client (connect to rocode test server): 
+<script>
+    var url = "http://121.140.140.35:9685/skrc.s2.jnlp.php";
+    deployJava.createWebStartLaunchButton(url, '1.6.0');
+</script>
+</p>
+<p>
+Start Remote Test Client (with key:[4694cefe08be13b1] but expired): 
+<script>
+    var url = "http://121.140.140.35:9685/skrc.s2.jnlp.php?reservation-id=4694cefe08be13b1";
+    deployJava.launchButtonPNG="./TC.png";
+    deployJava.createWebStartLaunchButton(url, '1.6.0');
+</script>
+</p
+</body>
+

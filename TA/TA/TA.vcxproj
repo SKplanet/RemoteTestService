@@ -1,0 +1,1006 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Redecon|Win32">
+      <Configuration>Redecon</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E7711F83-0D54-4746-A080-2A68125521A5}</ProjectGuid>
+    <RootNamespace>TA</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <LibraryPath>../skvideo/ipplib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <LibraryPath>../skvideo/ipplib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <LibraryPath>../skvideo/ipplib;$(LibraryPath)</LibraryPath>
+    <TargetName>$(Configuration)A</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;../rui;../skvideo/ippinc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wsock32.lib;libjpegd.lib;version.lib;winmm.lib;dsound.lib;pdh.lib;vfw32.lib;ippac_t.lib;ippcc_t.lib;ippch_t.lib;ippcore_t.lib;ippcv_t.lib;ippdc_t.lib;ippdi_t.lib;ippi_t.lib;ippj_t.lib;ippm_t.lib;ippr_t.lib;ipps_t.lib;ippsc_t.lib;ippvc_t.lib;ippvm_t.lib;libiomp5md.lib</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>false</MapExports>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CustomBuildStep>
+      <Command>copy /Y $(SolutionDir)..\skrc_android\bin\skrc_android-release.apk $(ProjectDir)ruicmd\com.rocode.skrc
+copy /Y $(ProjectDir)ruicmd\*.* $(TargetDir)
+copy /Y $(SolutionDir)skvideo\dll\*.* $(TargetDir)</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>copy ruicmd</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>$(TargetDir)AdbWinApi.dll;$(TargetDir)AdbWinUsbApi.dll;$(TargetDir)ruicapsvc;$(TargetDir)ruicmd.exe;$(TargetDir)com.rocode.skrc;$(TargetDir)libiomp5md.dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;../rui;../skvideo/ippinc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>wsock32.lib;libjpegr.lib;version.lib;winmm.lib;dsound.lib;pdh.lib;vfw32.lib;ippac_t.lib;ippcc_t.lib;ippch_t.lib;ippcore_t.lib;ippcv_t.lib;ippdc_t.lib;ippdi_t.lib;ippi_t.lib;ippj_t.lib;ippm_t.lib;ippr_t.lib;ipps_t.lib;ippsc_t.lib;ippvc_t.lib;ippvm_t.lib;libiomp5md.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CustomBuildStep>
+      <Command>copy /Y $(SolutionDir)..\skrc_android\bin\skrc_android-release.apk $(ProjectDir)ruicmd\com.rocode.skrc
+copy /Y $(ProjectDir)ruicmd\*.* $(TargetDir)
+copy /Y $(SolutionDir)skvideo\dll\*.* $(TargetDir)
+..\nsis\makensis.exe /DPRODUCT_BIN="$(TargetFileName)" /DPRODUCT_OUT="..\Release" ..\TA\TA.nsi</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>copy ruicmd</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>$(TargetDir)AdbWinApi.dll;$(TargetDir)AdbWinUsbApi.dll;$(TargetDir)ruicapsvc;$(TargetDir)ruicmd.exe;$(TargetDir)com.rocode.skrc;$(TargetDir)libiomp5md.dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REDECON;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;../rui;../skvideo/ippinc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>wsock32.lib;libjpegr.lib;version.lib;winmm.lib;dsound.lib;pdh.lib;vfw32.lib;ippac_t.lib;ippcc_t.lib;ippch_t.lib;ippcore_t.lib;ippcv_t.lib;ippdc_t.lib;ippdi_t.lib;ippi_t.lib;ippj_t.lib;ippm_t.lib;ippr_t.lib;ipps_t.lib;ippsc_t.lib;ippvc_t.lib;ippvm_t.lib;libiomp5md.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;REDECON;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CustomBuildStep>
+      <Command>copy /Y $(SolutionDir)..\skrc_android\bin\skrc_android-release.apk $(ProjectDir)ruicmd\com.rocode.skrc
+copy /Y $(ProjectDir)ruicmd\*.* $(TargetDir)
+copy /Y $(SolutionDir)skvideo\dll\*.* $(TargetDir)
+..\nsis\makensis.exe /DPRODUCT_BIN="$(TargetFileName)" /DPRODUCT_OUT="..\Redecon" ..\TA\RA.nsi</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>copy ruicmd</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>$(TargetDir)AdbWinApi.dll;$(TargetDir)AdbWinUsbApi.dll;$(TargetDir)ruicapsvc;$(TargetDir)ruicmd.exe;$(TargetDir)com.rocode.skrc;$(TargetDir)libiomp5md.dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="RA.nsi" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\1.bmp" />
+    <None Include="res\2.bmp" />
+    <None Include="res\3.bmp" />
+    <None Include="res\4.bmp" />
+    <None Include="res\5.bmp" />
+    <None Include="res\TA.ico" />
+    <None Include="res\TA.rc2" />
+    <None Include="res\toolbar1.bmp" />
+    <None Include="ruicmd\AdbWinApi.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="ruicmd\AdbWinUsbApi.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="ruicmd\ruicapsvc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="ruicmd\ruicmd.exe">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="TA.nsi" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\rui\keycodes.h" />
+    <ClInclude Include="..\rui\rui.h" />
+    <ClInclude Include="..\rui\ruicmd.h" />
+    <ClInclude Include="..\rui\RUIServerPeer.h" />
+    <ClInclude Include="..\rui\ruitdccmd.h" />
+    <ClInclude Include="..\rui\WinAES.h" />
+    <ClInclude Include="..\skvideo\Common\RUIDef.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aaccmn_adif.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aaccmn_adts.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aaccmn_chmap.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aaccmn_const.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_dec_own.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_enc_huff_tables.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_enc_own.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_enc_search.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_filterbank_fp.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_filterbank_int.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_sfb_tables.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_status.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\aac_wnd_tables_fp.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\align.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\audio_codec_params.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\bstream.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\mp4cmn_config.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\mp4cmn_const.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\mp4cmn_pce.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\ps_dec_parser.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\ps_dec_settings.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\ps_dec_struct.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_dec_parser.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_dec_settings.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_dec_struct.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_freq_tabs.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_huff_tabs.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_settings.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\sbr_struct.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\umc_aac_decoder_params.h" />
+    <ClInclude Include="..\skvideo\h264\common\codec\umc_aac_encoder_params.h" />
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_color_space_conversion.h" />
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_d3d_video_processing.h" />
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_data_pointers_copy.h" />
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_deinterlacing.h" />
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_video_processing.h" />
+    <ClInclude Include="..\skvideo\h264\common\color_space_converter\umc_video_resizing.h" />
+    <ClInclude Include="..\skvideo\h264\common\extension\ipp_extension.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_audio_codec.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_audio_render.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_base_codec.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_base_color_space_converter.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_data_reader.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_data_writer.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_default_frame_allocator.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_default_memory_allocator.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_defs.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_dual_thread_codec.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_dynamic_cast.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_frame_allocator.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_frame_data.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_index.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_linked_list.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_media_buffer.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_media_data.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_media_data_ex.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_media_receiver.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_memory_allocator.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_module_context.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_muxer.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_par_reader.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_splitter.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_splitter_ex.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_structures.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_video_data.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_video_decoder.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_video_encoder.h" />
+    <ClInclude Include="..\skvideo\h264\common\umc\umc_video_render.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\sys\vm_file_win.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\sys\vm_types_win32.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_debug.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_event.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_file.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_mmap.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_mutex.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_semaphore.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_shared_object.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_socket.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_strings.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_sys_info.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_thread.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_time.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm\vm_types.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_automatic_mutex.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_event.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_malloc.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_mmap.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_mutex.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_pendulum.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_semaphore.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_sys_info.h" />
+    <ClInclude Include="..\skvideo\h264\common\vm_plus\umc_thread.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\aac_enc_fp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\aac_enc_ltp_fp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\aac_enc_own_fp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\aac_enc_psychoacoustic_fp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\aac_enc_quantization_fp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\saacenc_tns.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_api_fp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_dbg.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_own_fp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_settings.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_struct.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc\umc_aac_encoder.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_filterbank_int.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_int.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_ltp_int.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_own_int.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_psychoacoustic_int.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_quantization_int.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_wnd_tables_int.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\saacenc_int_tns.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\aac_enc_int\umc_aac_encoder_int.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_base_bitstream.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_base_bitstream_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_base_bitstream_tmpl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_aic_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_avbr.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_bme.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_bs.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_bs_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_bs_tmpl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_config.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_core_enc.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_core_enc_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_core_enc_tmpl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_mbaff_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tmpl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tools.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tools_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tools_tmpl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_defs.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_defs_tmpl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_enc_cpb.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_enc_cpb_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_enc_cpb_tmpl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_ermb_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_gen_enc_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_mc_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_me_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_pack_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_tables.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_to_ipp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_video_encoder.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_video_encoder_tmpl.cpp.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\h264_enc\umc_h264_wrappers.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_me.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_me_cost_func.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_me_m2.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_me_sadt4x4.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_me_structures.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_vec_prediction.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\me\umc_vme.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_base.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_frame.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_mb_func.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_p.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_params.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_info.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\scene_analyzer\umc_video_data_scene_info.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_acinter.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_acintra.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_blk_order_tbl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_cbpcy_tbl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_dc_tbl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_defs.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_defs_enc.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_enc_tables.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlaced_cbpcy_tables.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlace_mb_mode_tables.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlace_mv_tables.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_macros_defs.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_mvdiff_tbl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_mv_block_pattern_tables.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_tables.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_tables_adv.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_ttmb_tbl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_zigzag_tbl.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_adv.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bitplane.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bitstream.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bit_rate_control.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_block.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_block_template.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_brc_gop.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_common.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_deblocking.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_debug.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_def.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_hrd.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_mb.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_mb_template.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_picture_adv.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_picture_sm.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_planes.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_pred.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sequence_adv.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sequence_sm.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sm.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_statistic.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_tables.h" />
+    <ClInclude Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_video_encoder.h" />
+    <ClInclude Include="..\skvideo\RUILib\G723\decode.h" />
+    <ClInclude Include="..\skvideo\RUILib\G723\encode.h" />
+    <ClInclude Include="..\skvideo\RUILib\G723\g711.h" />
+    <ClInclude Include="..\skvideo\RUILib\G723\g72x.h" />
+    <ClInclude Include="..\skvideo\RUILib\IPPAudioEncoder.h" />
+    <ClInclude Include="..\skvideo\RUILib\IPPVideoEncoder.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIAudio.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIBuffer.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIBufferAudioEncoder.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIBufferAudioEncoderThread.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIBufferList.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIBufferVideoEncoder.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIBufferVideoEncoderThread.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUICsLocker.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIFragmentBuffer.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIFragmentBufferList.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIFrameBuffer.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIFrameBufferList.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUILibDef.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIOffsetBuffer.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIOffsetBufferList.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUISockUtil.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUITCPSock.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUITCPSockClient.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUITCPSockPeer.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUITCPSockPeerList.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUITCPSockServer.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIThread.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIUDPFrameList.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIUDPSock.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIUDPSockList.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIUDPSockServer.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIUseBuffer.h" />
+    <ClInclude Include="..\skvideo\RUILib\RUIUseBufferList.h" />
+    <ClInclude Include="..\skvideo\RUILib\TList.h" />
+    <ClInclude Include="DlgPreview.h" />
+    <ClInclude Include="DlgSerial.h" />
+    <ClInclude Include="Preview.h" />
+    <ClInclude Include="Progress.h" />
+    <ClInclude Include="RAToolBar.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SSplitter.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TA.h" />
+    <ClInclude Include="TADlg.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="WaveInDevice.h" />
+    <ClInclude Include="WaveInDeviceList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\rui\RUIServerPeer.cpp" />
+    <ClCompile Include="..\rui\rui_adb.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StdAfx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">StdAfx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_client.cpp" />
+    <ClCompile Include="..\rui\rui_event.cpp" />
+    <ClCompile Include="..\rui\rui_file.cpp" />
+    <ClCompile Include="..\rui\rui_frame.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_log.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_poc.cpp" />
+    <ClCompile Include="..\rui\rui_socket.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_tdc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_thread.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\rui\rui_video.cpp" />
+    <ClCompile Include="..\rui\WinAES.cpp" />
+    <ClCompile Include="..\skvideo\Common\RUIDef.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\codec\aaccmn_adif.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aaccmn_adts.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aaccmn_chmap.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_dec_api.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_dec_stream_elements.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_enc_elements.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_enc_huff_tables.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_enc_search.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_filterbank_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_sfb_tables.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\aac_win_tables_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\bstream.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\mp4cmn_config.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\mp4cmn_const.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\mp4cmn_pce.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\ps_dec_parser.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\ps_huff_tabs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_dec_env_decoding.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_dec_parser.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_dec_reset.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_freq_tabs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_huff_tabs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\codec\sbr_pow_vec.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\color_space_converter\umc_color_space_conversion.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\color_space_converter\umc_d3d_video_processing.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\color_space_converter\umc_deinterlacing.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\color_space_converter\umc_video_processing.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\color_space_converter\umc_video_resizing.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\extension\ipp_extension.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_audio_codec.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_audio_render.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_base_codec.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_default_frame_allocator.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_default_memory_allocator.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_dual_thread_codec.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_frame_data.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_index.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_media_buffer.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_media_data.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_media_data_ex.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_muxer.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_par_reader.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_splitter.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_utils.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_video_data.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_video_decoder.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_video_encoder.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\umc\umc_video_render.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_debug_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_event_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_file.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_file_win.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_mmap_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_mutex_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_semaphore_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_shared_object_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_socket_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_sys_info_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_thread_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm\vm_time_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_event.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_malloc.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_mmap.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_mutex.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_pendulum.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_semaphore.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_sys_info.cpp" />
+    <ClCompile Include="..\skvideo\h264\common\vm_plus\umc_thread.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_api_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_ltp_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_psychoacoustic_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_psy_tables_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_quantization_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\aac_enc_thr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_bitstream.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_dbg.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_delta_coding.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_encoder_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_env_estimation_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_frame_gen.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_invf_estimation_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_noisef_estimation_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_qmf_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_resampler_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_sin_estimation_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_ton_estimation_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_tuning_tabs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\sbr_enc_utility_fp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc\umc_aac_encoder.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_api_int.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_filterbank_int.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_ltp_int.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_psychoacoustic_int.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_psy_tables_int.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_quantization_int.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\aac_enc_win_tables_int.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\skvideo\h264\encoder\aac_enc_int\umc_aac_encoder_int.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_base_bitstream.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_aic.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_avbr.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_bs.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_core_enc.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_mbaff.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_deblocking_tools.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_enc_cpb.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_ermb.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_gen_enc.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_mc.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_me.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_pack.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_sad.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_tables.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\h264_enc\umc_h264_video_encoder.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_me.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_me_m2.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_me_regr_tbl.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_me_sadt4x4.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_vec_prediction.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\me\umc_vme.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_base.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_frame.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_mb_func.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_p.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_p_func.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_scene_analyzer_p_func_mb.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\scene_analyzer\umc_video_data_scene_info.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_acinter.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_acintra.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_blk_order_tbl.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_cbpcy_tbl.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_dc_tbl.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_enc_tables.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlaced_cbpcy_tables.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlace_mb_mode_tables.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_interlace_mv_tables.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_mvdiff_tbl.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_mv_block_pattern_tables.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_tables.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_tables_adv.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_ttmb_tbl.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_common\umc_vc1_common_zigzag_tbl.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_adv.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bitplane.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bitstream.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_bit_rate_control.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_block.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_brc_gop.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_common.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_deblocking.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_debug.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_hrd.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_mb.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_picture_adv.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_picture_sm.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_planes.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_pred.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sequence_adv.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sequence_sm.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_sm.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_enc_statistic.cpp" />
+    <ClCompile Include="..\skvideo\h264\encoder\vc1_enc\umc_vc1_video_encoder.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\G723\decode.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\G723\encode.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\G723\g721.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\G723\g723_24.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\G723\g723_40.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\G723\g72x.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\IPPAudioEncoder.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\IPPVideoEncoder.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIAudio.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIAudioPlay.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIAudioRec.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIBuffer.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIBufferAudioEncoder.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIBufferAudioEncoderThread.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIBufferList.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIBufferVideoEncoder.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIBufferVideoEncoderThread.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUICsLocker.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIFragmentBuffer.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIFragmentBufferList.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIFrameBuffer.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIFrameBufferList.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUILibDef.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIOffsetBuffer.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIOffsetBufferList.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUISockUtil.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUITCPSock.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUITCPSockClient.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUITCPSockPeer.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUITCPSockPeerList.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUITCPSockServer.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIThread.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIUDPFrameList.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIUDPSock.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIUDPSockList.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIUDPSockServer.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIUseBuffer.cpp" />
+    <ClCompile Include="..\skvideo\RUILib\RUIUseBufferList.cpp" />
+    <ClCompile Include="callback.cpp" />
+    <ClCompile Include="DlgPreview.cpp" />
+    <ClCompile Include="DlgSerial.cpp" />
+    <ClCompile Include="Preview.cpp" />
+    <ClCompile Include="Progress.cpp" />
+    <ClCompile Include="RAToolBar.cpp" />
+    <ClCompile Include="SSplitter.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Redecon|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TA.cpp" />
+    <ClCompile Include="TADlg.cpp" />
+    <ClCompile Include="util.cpp" />
+    <ClCompile Include="WaveInDevice.cpp" />
+    <ClCompile Include="WaveInDeviceList.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TA.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="TA.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

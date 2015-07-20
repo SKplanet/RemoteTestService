@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	>
+	<TextView 
+		style="@android:style/TextAppearance.Large"
+		android:id="@+id/tag" 
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="3dip"
+		android:layout_marginTop="3dip"
+		android:layout_marginBottom="2dip"
+		android:gravity="center_vertical"
+		android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+		android:layout_height="55dip" android:layout_width="wrap_content"
+		android:text="@string/input_tag"
+		/>
+	<ToggleButton
+		android:id="@+id/start_log" 
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="3dip"
+		android:layout_marginTop="3dip"
+		android:layout_marginBottom="2dip"
+		android:gravity="center" 
+		android:textAppearance="@android:style/TextAppearance.Small"
+		android:layout_alignTop="@id/tag" 
+		android:layout_alignBottom="@id/tag"
+		android:layout_alignParentRight="true" 
+		android:layout_width="70dip"
+		android:layout_height="wrap_content" 
+		android:textOn="@string/service_start"
+		android:textOff="@string/service_stop"
+		android:onClick="handleClick" />
+	<EditText 
+		android:id="@+id/input_tag" 
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="3dip"
+		android:layout_marginTop="3dip"
+		android:layout_marginBottom="2dip"		
+		android:layout_alignTop="@id/tag" 
+		android:layout_toRightOf="@id/tag"
+		android:layout_toLeftOf="@id/start_log" 
+		android:layout_alignBottom="@id/tag"
+		android:layout_width="fill_parent" 
+		android:singleLine="true"
+		android:layout_height="wrap_content" 
+		android:hint="@string/input_tag_hint"
+		android:editable="false"
+		android:onClick="handleClick"
+		/>
+	<View
+		android:id="@+id/bar1" 
+		android:layout_below="@id/tag"
+		android:layout_width="fill_parent" 
+		android:layout_height="2dip"
+		android:background="#ffffff" 
+		/>
+	<TabHost 
+		android:id="@android:id/tabhost" 
+		android:layout_width="fill_parent"
+		android:layout_below="@id/bar1" 
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentBottom="true" 
+		android:layout_height="fill_parent"
+		>
+		<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			>
+			<TabWidget 
+				android:id="@android:id/tabs" 
+				android:layout_alignParentBottom="true"
+				android:layout_marginBottom="-5dip" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				/>
+			<View 
+				android:id="@+id/bar2" 
+				android:layout_above="@android:id/tabs"
+				android:layout_width="fill_parent" 
+				android:layout_height="2dip"
+				android:background="#9C9D9C" 
+				/>
+			<FrameLayout 
+				android:id="@android:id/tabcontent"
+				android:layout_above="@id/bar2" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				>
+				<include layout="@layout/log_viewer" />
+				<include layout="@layout/toast_setting" />
+			</FrameLayout>
+		</RelativeLayout>
+	</TabHost>
+</RelativeLayout>

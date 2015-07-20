@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="invisible">감추기</string>
+    <string name="visible">표시</string>
+    <string name="toast_visibility_">토스트 표시: </string>
+    <string name="toast_size_">토스트 크기: </string>
+    <string name="toast_location_">토스트 위치: </string>
+    <string name="log_toaster_running">로그 토스터: 작동중</string>
+    <string name="log_toaster_stopped">로그 토스터: 정지됨</string>
+    <string name="_30_">30%</string>
+    <string name="_50_">50%</string>
+    <string name="_100_">100%</string>
+    <string name="bottom">Bottom</string>
+    <string name="center">Center</string>
+    <string name="top">Top</string>
+    <string name="logging_service_is_now_running_">로그 토스터 서비스가 동작하고 있습니다.</string>
+    <string name="click_this_pannel_to_invoke_a_log_remocon">클릭하시면, 로그 토스터 리모컨이 시작됩니다.</string>
+    <string name="please_display_non_tagged_logs_too">모든 로그가 표시됩니다.</string>
+    <string name="seperated_by">\',\' 로 구분하여 입력하세요.</string>
+    <string name="toats_size">토스트 크기</string>
+    <string name="toats_location">토스트 위치</string>
+    <string name="no_log">표시할 로그가 없습니다.</string>
+    <string name="tab_toast_setting">토스트 설정</string>
+    <string name="tabl_log_viewer">로그 뷰어</string>
+    <string name="hide_toast">토스트\n숨기기</string>
+    <string name="stop_service">서비스\n중단</string>
+    <string name="launch_viewer">로그 뷰어\n시작</string>
+    <string name="show_toast">토스트\n보이기</string>
+    <string name="rc_title">로그 토스터</string>
+    <string name="jump_to_error">에러로그 확인</string>
+    <string name="fail_to_create_a_file">로그 파일을 생성하는데 실패하였습니다. 저장장치 용량을 확인하세요.</string>
+    <string name="save_as">저장</string>
+    <string name="send_to">보내기</string>
+    <string name="service_start">ON</string>
+    <string name="input_tag_hint">클릭하세요.</string>
+    <string name="input_tag">필터: </string>
+    <string name="service_stop">OFF</string>
+    <string name="filter_priority">로그 표시 레벨 설정</string>
+    <string name="logtoaster_app_name">LogToaster</string>
+    <string name="rotate_app_name">Rotate</string>
+    <string name="app_name">SKRC</string>
+    <string name="lock_screen_msg">접근할 수 없는 프로그램 입니다.\nHome 키를 누르세요.\n\n접근 권한이 필요하시면 관리자에게 문의 하세요.</string>
+</resources>

@@ -1,0 +1,5 @@
+keytool -genkey -v -keystore skrc-release-key.keystore -alias skrc-key -keyalg RSA -validity 10000
+
+CN=HEUIJEONG CHAE, OU=R&D, O=ROCODE, L=SEOUL, ST=KOREA, C=KR
+PASSWORD:SKPlanetSKRC
+alias:skrc-key PASSWORD:SKPlanetSKRC

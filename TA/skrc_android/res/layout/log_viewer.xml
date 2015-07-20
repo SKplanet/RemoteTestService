@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/log" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<View 
+		android:id="@+id/log_list_bar_right" 
+		android:layout_alignParentRight="true"
+		android:layout_width="1dip"
+		android:layout_height="fill_parent"
+		android:background="#9C9D9C"
+		/>
+	<View 
+		android:id="@+id/log_list_bar_left" 
+		android:layout_alignParentLeft="true"
+		android:layout_width="1dip"
+		android:layout_height="fill_parent"
+		android:background="#9C9D9C"
+		/>
+    <!-- The frame layout is here since we will be showing either
+    the empty view or the list view.  --> 
+    <FrameLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+		android:layout_toRightOf="@id/log_list_bar_left"
+		android:layout_toLeftOf="@id/log_list_bar_right"
+        android:layout_weight="1" > 
+	<ListView
+		android:id="@+id/log_list" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:background="#222222" />
+        <!-- Here is the view to show if the list is emtpy --> 
+        <TextView android:id="@+id/empty"
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textStyle="italic"
+            android:textColor="#999999"
+            android:text="@string/no_log"/> 
+    </FrameLayout>		
+</RelativeLayout>
+

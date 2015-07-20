@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/toast_setting"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<RelativeLayout
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		>
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="fill_parent"
+			android:gravity="center_vertical"
+			android:layout_marginLeft="10dip"
+			android:text="@string/toast_visibility_"
+			android:layout_alignParentLeft="true"
+			android:textAppearance="@android:style/TextAppearance.Large"
+			/>
+		<ToggleButton
+			android:id="@+id/toast_setting_visibility"
+			android:layout_width="100dip" 
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dip"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:textOn="@string/visible"
+			android:textOff="@string/invisible"
+			android:textAppearance="@android:style/TextAppearance.Small"
+			android:onClick="handleClick"
+			/>
+	</RelativeLayout>
+	<View 
+		android:layout_width="fill_parent" 
+		android:layout_height="1dip"
+		android:background="#222222"
+		/>
+	<RelativeLayout
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		>
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="fill_parent"
+			android:gravity="center_vertical"
+			android:layout_marginLeft="10dip"
+			android:text="@string/toast_size_"
+			android:layout_alignParentLeft="true"
+			android:textAppearance="@android:style/TextAppearance.Large"
+			/>
+		<Button
+			android:id="@+id/toast_setting_size"
+			android:layout_width="100dip" 
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dip"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:text="100%"
+			android:textAppearance="@android:style/TextAppearance.Medium"
+			android:onClick="handleClick"
+			/>
+	</RelativeLayout>
+	<View 
+		android:layout_width="fill_parent" 
+		android:layout_height="1dip"
+		android:background="#222222"
+		/>
+	<RelativeLayout
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		>
+		<TextView
+			android:layout_width="wrap_content" 
+			android:layout_height="fill_parent"
+			android:gravity="center_vertical"
+			android:layout_marginLeft="10dip"
+			android:text="@string/toast_location_"
+			android:layout_alignParentLeft="true"
+			android:textAppearance="@android:style/TextAppearance.Large"
+			/>
+		<Button
+			android:id="@+id/toast_setting_location"
+			android:layout_width="100dip" 
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dip"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:text="TOP"
+			android:textAppearance="@android:style/TextAppearance.Medium"
+			android:onClick="handleClick"			
+			/>
+	</RelativeLayout>
+</LinearLayout>
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--	android:id="@+id/toast_setting" -->
+<!--	android:layout_width="fill_parent"-->
+<!--	android:layout_height="fill_parent">-->
+<!--	<ImageButton-->
+<!--		android:id="@+id/toast_icon" -->
+<!--		android:src="@drawable/toaster_off"-->
+<!--		android:layout_alignParentTop="true"-->
+<!--		android:layout_alignParentLeft="true"-->
+<!--		android:layout_margin="10dip"-->
+<!--		android:layout_width="wrap_content" -->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:onClick="handleClick"-->
+<!--		android:background="#00000000"-->
+<!--		/>-->
+<!--	<TextView -->
+<!--		android:id="@+id/toast_txt1" -->
+<!--		android:layout_margin="10dip"-->
+<!--		android:textAppearance="@android:style/TextAppearance.Medium"-->
+<!--		android:textStyle="italic"-->
+<!--		android:gravity="center"-->
+<!--		android:layout_alignParentTop="true"-->
+<!--		android:layout_alignBottom="@id/toast_icon"-->
+<!--		android:layout_toRightOf="@id/toast_icon"-->
+<!--		android:layout_width="fill_parent"-->
+<!--		android:layout_height="wrap_content" -->
+<!--		android:text="Do Toasting?" -->
+<!--		/>	-->
+<!--	<View-->
+<!--		android:id="@+id/toast_bar1" -->
+<!--		android:layout_width="fill_parent"-->
+<!--		android:layout_height="1dip" -->
+<!--		android:layout_below="@id/toast_icon"-->
+<!--		android:background="#222222"-->
+<!--		/>-->
+<!--	<TextView -->
+<!--		android:id="@+id/toast_txt2" -->
+<!--		android:layout_margin="10dip"-->
+<!--		android:textAppearance="@android:style/TextAppearance.Small"-->
+<!--		android:textStyle="italic"-->
+<!--		android:layout_below="@id/toast_bar1"-->
+<!--		android:layout_width="fill_parent"-->
+<!--		android:layout_height="wrap_content" -->
+<!--		android:text="Toast Location" -->
+<!--		/>-->
+<!--	<ImageButton-->
+<!--		android:id="@+id/toast_loc_top" -->
+<!--		android:layout_below="@id/toast_txt2"-->
+<!--		android:layout_alignParentLeft="true"-->
+<!--		android:layout_margin="10dip"-->
+<!--		android:layout_width="wrap_content" -->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:onClick="handleClick"-->
+<!--		android:src="@drawable/loc_top" -->
+<!--		/>		-->
+<!--	<ImageButton-->
+<!--		android:id="@+id/toast_loc_center" -->
+<!--		android:layout_below="@id/toast_txt2"-->
+<!--		android:layout_margin="10dip"-->
+<!--		android:layout_centerHorizontal="true"-->
+<!--		android:layout_width="wrap_content" -->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:onClick="handleClick"-->
+<!--		android:src="@drawable/loc_center" -->
+<!--		/>		-->
+<!--	<ImageButton-->
+<!--		android:id="@+id/toast_loc_bottom" -->
+<!--		android:layout_below="@id/toast_txt2"-->
+<!--		android:layout_alignParentRight="true"-->
+<!--		android:layout_margin="10dip"-->
+<!--		android:layout_width="wrap_content" -->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:onClick="handleClick"-->
+<!--		android:src="@drawable/loc_bottom" -->
+<!--		/>		-->
+<!--	<View-->
+<!--		android:id="@+id/toast_bar2" -->
+<!--		android:layout_width="fill_parent"-->
+<!--		android:layout_height="1dip" -->
+<!--		android:layout_below="@id/toast_loc_center"-->
+<!--		android:background="#222222"-->
+<!--		/>		-->
+<!--	<TextView -->
+<!--		android:id="@+id/toast_txt3" -->
+<!--		android:layout_margin="10dip"-->
+<!--		android:textAppearance="@android:style/TextAppearance.Small"-->
+<!--		android:textStyle="italic"-->
+<!--		android:layout_below="@id/toast_bar2"-->
+<!--		android:layout_width="fill_parent"-->
+<!--		android:layout_height="wrap_content" -->
+<!--		android:text="Toast Size" -->
+<!--		/>-->
+<!--	<ImageButton-->
+<!--		android:id="@+id/toast_size_33" -->
+<!--		android:layout_below="@id/toast_txt3"-->
+<!--		android:layout_alignParentLeft="true"-->
+<!--		android:layout_margin="10dip"-->
+<!--		android:layout_width="wrap_content" -->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:onClick="handleClick"-->
+<!--		android:src="@drawable/size_33"-->
+<!--		android:scaleType="fitXY"-->
+<!--		/>		-->
+<!--	<ImageButton-->
+<!--		android:id="@+id/toast_size_50" -->
+<!--		android:layout_below="@id/toast_txt3"-->
+<!--		android:layout_margin="10dip"-->
+<!--		android:layout_centerHorizontal="true"-->
+<!--		android:layout_width="wrap_content" -->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:onClick="handleClick"-->
+<!--		android:src="@drawable/size_50"-->
+<!--		android:scaleType="fitXY"-->
+<!--		/>		-->
+<!--	<ImageButton-->
+<!--		android:id="@+id/toast_size_100" -->
+<!--		android:layout_below="@id/toast_txt3"-->
+<!--		android:layout_alignParentRight="true"-->
+<!--		android:layout_margin="10dip"-->
+<!--		android:layout_width="wrap_content" -->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:onClick="handleClick"-->
+<!--		android:src="@drawable/size_100"-->
+<!--		android:scaleType="fitXY"-->
+<!--		/>				-->
+<!--</RelativeLayout>-->
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:id="@+id/toast_setting" android:layout_width="fill_parent" android:layout_height="fill_parent" 
+	android:orientation="vertical"> <TextView xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:id="@+id/toast_start" android:layout_width="fill_parent" android:background="#222222" 
+	android:layout_height="wrap_content" android:text="Do Toasting?" /> <Button 
+	android:id="@+id/toast_start_yes" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+	android:text="Yes" /> <Button android:id="@+id/toast_start_no" android:layout_width="fill_parent" 
+	android:layout_height="wrap_content" android:text="No" /> <TextView xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:id="@+id/toast_location" android:layout_width="fill_parent" android:background="#222222" 
+	android:layout_height="wrap_content" android:text="Toasting Location" /> 
+	<Button android:id="@+id/toast_location_top" android:layout_width="fill_parent" 
+	android:layout_height="wrap_content" android:text="Top" /> <Button android:id="@+id/toast_location_center" 
+	android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Center" 
+	/> <Button android:id="@+id/toast_location_bottom" android:layout_width="fill_parent" 
+	android:layout_height="wrap_content" android:text="Bottom" /> <TextView xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:id="@+id/toast_size" android:layout_width="fill_parent" android:background="#222222" 
+	android:layout_height="wrap_content" android:text="Toaster Size" /> <Button 
+	android:id="@+id/toast_size_30" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+	android:text="30%" /> <Button android:id="@+id/toast_size_50" android:layout_width="fill_parent" 
+	android:layout_height="wrap_content" android:text="50%" /> <Button android:id="@+id/toast_size_50" 
+	android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="100%" 
+	/> </LinearLayout> -->

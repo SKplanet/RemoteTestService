@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  >
+  	<EditText
+  	android:id="@+id/log_tag"
+	android:layout_margin="8dip"
+	android:layout_width="fill_parent"
+	android:layout_height="50dip"
+	android:hint="@string/seperated_by"
+	android:singleLine="true"
+  	/>
+  	<Spinner
+  	android:id="@+id/select_priority1"
+	android:layout_margin="6dip"
+	android:layout_width="fill_parent"
+	android:layout_height="50dip"
+	android:entries="@array/log_level"
+	android:prompt="@string/filter_priority"
+  	/>  	
+  	<CheckBox
+  	android:id="@+id/log_all"
+	android:layout_width="fill_parent"
+	android:layout_height="50dip"
+	android:checked="false"
+	android:textStyle="italic"
+	android:text="@string/please_display_non_tagged_logs_too"
+  	/>
+</LinearLayout>

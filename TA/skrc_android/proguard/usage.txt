@@ -1,0 +1,150 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.rocode.info.DeviceControl:
+    166:170:public boolean isSimStateNetworkLocked()
+    237:238:public void reboot(java.lang.String)
+    247:247:public int getDisplayId()
+    259:260:public void getMetrics(android.util.DisplayMetrics)
+    267:267:public float getRefreshRate()
+    300:300:public float getDensity()
+    308:308:public int getHeightPixels()
+    312:312:public float getScaledDensity()
+    316:316:public int getWidthPixels()
+    320:320:public float getXdpi()
+    324:324:public float getYdpi()
+    458:459:public void installPackage(java.io.File)
+    462:463:public void rebootWipeCache()
+    466:467:public void rebootWipeUserData()
+    471:472:public void verifyPackage(java.io.File,android.os.RecoverySystem$ProgressListener,java.io.File)
+com.rocode.log.Log:
+    3:3:public Log()
+    12:15:public static int v(java.lang.String,java.lang.String)
+    33:36:public static int w(java.lang.String,java.lang.String)
+com.rocode.monitor.CallMonitorBroadcastReceiver:
+    protected static final java.lang.String TAG
+com.rocode.monitor.ServiceMonitorBroadcastReceiver:
+    private static final java.lang.String TAG
+com.rocode.parser.CMDParser:
+    public static final int SEND_MULTIPLE_PACKET
+    public static final int IS_SCREEN_ON
+    public static final int WAKE_LOCK_ACQUIRE
+    public static final int WAKE_LOCK_RELEASE
+    public static final int GET_ROTATION
+    public static final int GET_WIDTH
+    public static final int GET_HEIGHT
+    public static final int GET_PIXELFORMAT
+    public static final int SET_ROTATION_0
+    public static final int SET_ROTATION_90
+    public static final int SET_ROTATION_180
+    public static final int SET_ROTATION_270
+    public static final int SET_ROTATION_RECOVERY
+    public static final int GET_DENSITY_DPI
+    public static final int GET_RC_VERSION
+    public static final int GET_BATTERY_TEMPERATURE
+    public static final int GET_BATTERY_LEVEL
+    public static final int GET_BUILD_BOARD
+    public static final int GET_BUILD_BOOTLOADER
+    public static final int GET_BUILD_BRAND
+    public static final int GET_BUILD_CPU_ABI
+    public static final int GET_BUILD_CPU_ABI2
+    public static final int GET_BUILD_DEVICE
+    public static final int GET_BUILD_DISPLAY
+    public static final int GET_BUILD_FINGERPRINT
+    public static final int GET_BUILD_HARDWARE
+    public static final int GET_BUILD_HOST
+    public static final int GET_BUILD_ID
+    public static final int GET_BUILD_MANUFACTURER
+    public static final int GET_BUILD_MODEL
+    public static final int GET_BUILD_PRODUCT
+    public static final int GET_BUILD_RADIO
+    public static final int GET_BUILD_SERIAL
+    public static final int GET_BUILD_TAGS
+    public static final int GET_BUILD_TIME
+    public static final int GET_BUILD_TYPE
+    public static final int GET_BUILD_USER
+    public static final int GET_BUILD_VERSION_CODENAME
+    public static final int GET_BUILD_VERSION_INCREMENTAL
+    public static final int GET_BUILD_VERSION_RELEASE
+    public static final int GET_BUILD_VERSION_SDK_INT
+    public static final int SET_BLOCKED_PKGNAME_LIST
+    public static final int SET_CALL_BLOCK_LIST
+    public static final int SET_CALL_ALLOW_LIST
+    public static final int SET_BLOCKED_MIMETYPE_LIST
+    public static final int SET_LOG_ENABLE
+    public static final int GET_STATUS
+    public static final int GET_INSTALLED_PKG_NAME
+    public static final int GET_LINE1_NUMBER
+    public static final int GET_NETWORK_OPERATOR
+    public static final int GET_NETWORK_OPERATOR_NAME
+    public static final int IS_SIM_STATE_ABSENT
+    public static final int IS_SIM_STATE_NETWORK_LOCKED
+    public static final int IS_SIM_STATE_PIN_REQUIRED
+    public static final int IS_SIM_STATE_PUK_REQUIRED
+    public static final int IS_SIM_STATE_READY
+    public static final int IS_SIM_STATE_UNKNOWN
+    public static final int GET_DEVICE_ID
+    public static final int GET_DEVICE_SOFTWARE_VERSION
+    public static final int LOGCAT_START
+    public static final int LOGCAT_STOP
+    public static final int PKG_BLOCK_HANDLER_START
+    public static final int PKG_BLOCK_HANDLER_STOP
+    public static final int SET_PKG_BLOCK_HANDLER_DELAY
+    public static final int DELETE_ALL
+    public static final int DELETE_SMS
+    public static final int DELETE_CALL
+    public static final int DELETE_MMS
+    public static final int INVALID_COMMAND
+    15:15:public CMDParser()
+com.rocode.rotate.IRotate$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_rotate0
+    static final int TRANSACTION_rotate90
+    static final int TRANSACTION_rotate180
+    static final int TRANSACTION_rotate270
+    static final int TRANSACTION_rotateRecovery
+com.rocode.rotate.IRotate$Stub$Proxy:
+    96:96:public java.lang.String getInterfaceDescriptor()
+com.rocode.rotate.RotateActivity:
+    199:199:public boolean isSystemPackage(android.content.pm.PackageInfo)
+    203:203:private boolean isSystemPackage(android.content.pm.ResolveInfo)
+com.rocode.rotate.ScreenRotator:
+    public static final int SCREEN_ORIENTATION_PORTRAIT
+    public static final int SCREEN_ORIENTATION_LANDSCAPE
+    public static final int SCREEN_ORIENTATION_REVERSE_LANDSCAPE
+    public static final int SCREEN_ORIENTATION_REVERSE_PORTRAIT
+    public static final int SCREEN_ORIENTATION_FULL_SENSOR
+    135:153:public static void rotate(int)
+    156:156:public int getRotation()
+com.rocode.skrc.BuildConfig
+com.rocode.skrc.IRCService
+com.rocode.skrc.IRCService$Stub
+com.rocode.skrc.IRCService$Stub$Proxy
+com.rocode.skrc.R
+com.rocode.skrc.R$array
+com.rocode.skrc.R$attr
+com.rocode.skrc.R$drawable
+com.rocode.skrc.R$id
+com.rocode.skrc.R$layout
+com.rocode.skrc.R$string
+com.rocode.skrc.RCService:
+    protected static final java.lang.String TAG
+    public static final int DEFAULT_POST_DELAY
+com.rocode.skrc.SKRCServiceJNI
+com.rocode.socket.DeviceInfoServer:
+    private static final java.lang.String TAG
+    private static final int SIZE_LENGTH
+    private static final int CMD_LENGTH
+    private static final int INDEX_LENGTH
+    private static final int RESULT_LENGTH
+    public static final int HEADER_SIZE
+    public static final int MAX_PACKET_SIZE
+    public static final int DATA_LENGTH
+    public static final int DEFAULT_PORT
+    private static final int TIME_OUT
+com.rocode.util.Utils:
+    13:13:public Utils()
+    16:16:public static boolean isSystemPackage(android.content.pm.PackageInfo)
+    20:20:public static boolean isSystemPackage(android.content.pm.ResolveInfo)
+org.devtcg.tools.logcat.LogcatProcessor:
+    private static final int BUFFER_SIZE
+    64:64:public int getLineCount()
